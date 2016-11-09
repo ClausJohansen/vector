@@ -8,29 +8,29 @@ namespace Vector
 {
     class Vector3d
     {
-        private int x, y, z;
+        private float x, y, z;
 
-        public Vector3d(int x, int y, int z)
+        public Vector3d(float x, float y, float z)
         {
             this.x = x;
             this.y = y;
             this.z = z;
         }
 
-        public int X { get { return x; } }
-        public int Y { get { return y; } }
-        public int Z { get { return z; } }
+        public float X { get { return x; } }
+        public float Y { get { return y; } }
+        public float Z { get { return z; } }
 
         public double getLength()
         {
-            return Math.Sqrt(Math.Pow(x, 2) + Math.Pow(y, 2) + Math.Pow(z, 2));
+            return (float) Math.Sqrt(Math.Pow(x, 2) + Math.Pow(y, 2) + Math.Pow(z, 2));
         }
 
         public Vector3d add(Vector3d addition)
         {
-            int resultX = x + addition.x;
-            int resultY = y + addition.y;
-            int resultZ = z + addition.z;
+            float resultX = x + addition.x;
+            float resultY = y + addition.y;
+            float resultZ = z + addition.z;
 
             return new Vector3d(resultX, resultY, resultZ);
         }
